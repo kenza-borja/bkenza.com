@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    background-color: rgb(234, 200, 234); 
+}
+
+nav{
+    /*background-color: rgb(145, 76, 145);*/
+    background-color: white;
+}
+
+footer {
+    margin-top: 30vh;
+}

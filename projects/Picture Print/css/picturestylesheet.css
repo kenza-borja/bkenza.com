@@ -1,0 +1,233 @@
+body {
+    background-color: rgb(103, 161, 233);
+    margin: 0%;
+    /*
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;*/
+  }
+
+.conatinerimage{
+    position: relative;
+  text-align: center; 
+}
+
+div.gap {
+    display: grid;
+    row-gap: 0px;
+  }
+  
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom:1%;
+    left: 16px;
+  }
+
+
+
+.text{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: balck;
+
+}
+
+#title {
+    float: left;
+    margin: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    display: inline;
+}
+
+.biggertextleft{
+    font-size: 60px;
+    text-align: left; 
+    margin: 20px;
+}
+
+.bigtext{
+    font-size: 60px;
+    text-align: center; 
+    margin: 20px;
+}
+
+.normaltextleft{
+    text-align: left;
+    margin: 20px;
+}
+
+.overflow{
+    inline-size: 50%;
+    overflow-wrap: break-word;
+}
+
+.flatbackground{
+    background-color: rgba(240, 248, 255,0.4);
+}
+
+.quote{
+    padding: 10% 2% 10% 2%;
+}
+
+#quote{
+    font-family: cursive;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+div.bg{
+    background-color: rgba(240, 248, 255,0.4);
+    margin:30px;
+    border: 2px solid rgba(240, 248, 255, 0);
+    border-radius: 8px;
+    /*padding: 20px;*/
+}
+
+header{
+    position: fixed;
+    background-color: rgb(103, 161, 233);
+    width: 100%;
+    margin-top: 0%;
+    z-index: 1;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    float: left; 
+    margin: 34px 10px 2% 20px;
+    background-color: rgba(240, 248, 255,0);
+    border-radius: 25%;
+}
+
+ul{
+    margin: 0px 0px 0px 200px;
+    list-style-type: none;
+    
+}
+.container {
+    margin-top: 6%;
+}
+
+.container10{
+    margin-top: 10%;
+}
+
+.centered {
+    padding: 20% 5% 20% 5%;
+}
+
+
+/*FLEX BOX*/
+.flex-container{
+    display: flex;
+    flex-grow: 1;
+    /*justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: stretch;*/
+}
+
+.box1{
+    width: 1000px;
+    flex-grow: 1;
+    margin: 1%;
+    margin-top: 0%;
+    /*border: 2px black solid;*/
+}
+
+.box2{
+    flex-grow: 1;
+    margin: 1%;
+    margin-top: 0%;
+    /*border: 2px black solid;*/
+}
+
+
+
+
+/* SHOP */
+.inline{
+    display:flex;
+    flex-grow: 1;
+}
+
+#COLLECTION1{
+    background-color: rgb(0, 180, 216);
+    display: grid;
+    row-gap: 0px;
+}
+
+#COLLECTION2{
+    background-color: rgb(0, 150, 199);
+    display: grid;
+    row-gap: 0px;
+}
+
+#COLLECTION3{
+    background-color: rgb(0, 119, 182);
+    display: grid;
+    row-gap: 0px;
+}
+
+#COLLECTION4{
+    background-color: rgb(2, 62, 138);
+    display: grid;
+    row-gap: 0px;
+}
+
+#COLLECTION5{
+    background-color: rgb(3, 4, 94);
+    display: grid;
+    row-gap: 0px;
+}
+
+.headings{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: aliceblue;
+    font-size: 40px;
+}
+
+/*Text-Shadow
+
+ element {
+
+ text-shadow: h-offset v-offset | color*, blur, spread; * required on Safari
+
+}
+*/
+
+/* Box-Shadow
+
+ element {
+
+  box-shadow: h-offset v-offset | color*, blur, spread, inset; * required on Safari
+
+}
+*/
+
+
+h1{
+    text-shadow: 2px 2px rgb(252,222,159);
+}
+
+@media(min-width: 600px){
+    body{
+        background-color: rgb(191, 208, 229);
+    }
+}
+@media(min-width: 900px){
+    body{
+        background-color: rgb(150, 185, 228);
+    }
+}
+@media(min-width: 1200px){
+    body{
+        background-color: rgb(103, 161, 233);
+    }
+}
