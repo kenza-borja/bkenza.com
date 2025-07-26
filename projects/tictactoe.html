@@ -3,16 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Tic-Tac-Toe Game</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #333;
+        }
 
         table {
             border-collapse: collapse;
             width: 300px;
-            margin: auto;
+            height: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
         }
 
         td {
@@ -22,12 +39,41 @@
             vertical-align: middle;
             font-size: 48px;
             font-weight: bold;
-            border: 1px solid black;
+            border: 2px solid #333;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        td:hover {
+            background-color: #e0e0e0;
+        }
+
+        #status {
+            margin: 20px;
+            font-size: 18px;
+            color: #444;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 
 <body>
+    <h1>Tic-Tac-Toe</h1>
+    <div id="status">Current Player: X</div>
     <table id="board">
         <tr>
             <td id="cell-0-0"></td>
@@ -45,27 +91,34 @@
             <td id="cell-2-2"></td>
         </tr>
     </table>
+    <button onclick="resetGame()">Reset Game</button>
 
     <script>
         var player = "X";
         var gameOver = false;
-
+        var statusText = document.getElementById('status');
         var cells = document.querySelectorAll('td');
-        for (var i = 0; i < cells.length; i++) {
-            cells[i].addEventListener('click', function (e) {
-                if (!gameOver) {
-                    if (this.textContent === "") {
-                        this.textContent = player;
-                        checkForWin();
-                        checkForTie();
+
+        cells.forEach(cell => {
+            cell.addEventListener('click', function () {
+                if (!gameOver && this.textContent === "") {
+                    this.textContent = player;
+                    if (checkForWin()) {
+                        statusText.textContent = player + " wins!";
+                        gameOver = true;
+                    } else if (checkForTie()) {
+                        statusText.textContent = "It's a tie!";
+                        gameOver = true;
+                    } else {
                         player = (player === "X") ? "O" : "X";
+                        statusText.textContent = "Current Player: " + player;
                     }
                 }
             });
-        }
+        });
 
         function checkForWin() {
-            var winningCombinations = [
+            const combos = [
                 [0, 1, 2],
                 [3, 4, 5],
                 [6, 7, 8],
@@ -76,29 +129,25 @@
                 [2, 4, 6]
             ];
 
-            for (var i = 0; i < winningCombinations.length; i++) {
-                if (cells[winningCombinations[i][0]].textContent === player &&
-                    cells[winningCombinations[i][1]].textContent === player &&
-                    cells[winningCombinations[i][2]].textContent === player) {
-                    alert(player + ' wins!');
-                    gameOver = true;
-                    return;
-                }
-            }
+            return combos.some(combo => {
+                const [a, b, c] = combo;
+                return cells[a].textContent === player &&
+                    cells[b].textContent === player &&
+                    cells[c].textContent === player;
+            });
         }
 
         function checkForTie() {
-            var filledCells = 0;
-            for (var i = 0; i < cells.length; i++) {
-                if (cells[i].textContent !== "") {
-                    filledCells++;
-                }
-            }
-            if (filledCells === cells.length) {
-                alert("Tie game!");
-                gameOver = true;
-            }
+            return Array.from(cells).every(cell => cell.textContent !== "");
+        }
+
+        function resetGame() {
+            cells.forEach(cell => cell.textContent = "");
+            player = "X";
+            gameOver = false;
+            statusText.textContent = "Current Player: " + player;
         }
     </script>
-
 </body>
+
+</html>

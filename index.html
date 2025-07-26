@@ -2,112 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Kenza Develops</title>
-    <link rel="icon" type="image/x-icon" href="/images/icon.png">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenza Borja | Portfolio</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/images/icon.png" />
 </head>
 
 <body>
-    <!--navigation bar-->
-    <nav>
-        <a href="#home">Kenza Develops</a>
-        <!--<a href="#home">Home</a> |
-        <a href="#about">About</a> |
-        <a href="#services">Services</a> |
-        <a href="#contact">Contact</a>-->
-    </nav>
+    <!-- Navigation -->
+    <header>
+        <div class="container nav">
+            <h1 class="logo">Kenza Borja</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-    <!--hero-->
-    <div class="hero">
-        <h1 class="hero-text">As a junior developer, I am excited to showcase my skills
-            and passion through a portfolio website. With a strong understanding of <mark> HTML, CSS, 
-            JavaScript, Python, Java and SQL,</mark> I am able to create visually stunning and responsive webpages that
-            are optimized for a wide range of devices. I am a <mark>creative problem-solver and I am
-            always eager to learn new technologies.</mark> I hope that this portfolio website that will
-            effectively demonstrate my abilities
-            as a developer.</h1>
-    </div>
-
-    <!--projects grid-->
-    <h2 class="title">Software Projects.</h2>
-    <div class="grid-container">
-
-        <a> <!--add link back in-->
-            <div class="grid-item">
-                <h3>Restaurant Till System (Comming Soon)
-                </h3>
-            </div>
-        </a>
-
-        <a target="_blank" href="/projects/tictactoe.html">
-            <div class="grid-item">
-                <h3>Tic Tac Toe</h3>
-            </div>
-        </a>
-
-        <a target="_blank" href="https://replit.com/@KenzaBorja/Songs">
-            <div class="grid-item">
-                <h3>Songs</h3>
-            </div>
-        </a>
-
-        <a target="_blank" href="https://replit.com/@KenzaBorja/Bird-Generation-Calculator">
-            <div class="grid-item">
-                <h3>Birds Generations Calculator</h3>
-            </div>
-        </a>
-
-    </div>
-
-    <h2 class="title">Web Projects.</h2>
-    <div class="grid-container">
-        <a target="_blank" href="../projects/kenza.com/html/indexkb.html">
-            <div class="grid-item">
-                <h3>bkenza.com v.1</h3>
-            </div>
-        </a>
-
-        <a target="_blank" href="/projects/FinalCopyBus/html/BusIndex.html">
-            <div class="grid-item">
-                <h3>Business Calculator</h3>
-            </div>
-        </a>
-
-        <a target="_blank" href="/projects/Picture Print/html/pictureindex.html">
-            <div class="grid-item">
-                <h3>Picture Print</h3>
-            </div>
-        </a>
-
-
-    </div>
-
-    <!--contact-->
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <a href="mailto:kenzaborja@gmail.com?subject=Inquiry&body=Hello, I would like to inquire about..."
-            class="contact-button">Contact</a>
-
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Hello, I'm a Junior Software Engineer</h2>
+            <p>
+                I specialize in Java and object-oriented design. Over the past two years, I've contributed to backend systems,
+                built reusable components, and helped create solutions focused on reliability and clean architecture.
+            </p>
+        </div>
     </section>
 
-    <!--footer-->
-    <footer>
+    <!-- Projects -->
+    <section id="projects" class="projects">
         <div class="container">
-            <div class="contact-info">
-                <p>Email: kenzaborja@gmail.com</p>
-                <a href="https://github.com/b-kenza">Github</a>
-                <a href="https://www.linkedin.com/in/kenzaborja/?originalSubdomain=uk">Linkedin</a>
-                <p>bkenza.com v.2</p>
+            <h2>Software Projects</h2>
+            <div class="grid">
+                <a href="/projects/tictactoe.html" class="card">
+                    <h3>Tic Tac Toe</h3>
+                    <p>Classic game with JavaScript interactivity</p>
+                </a>
+                <a href="https://replit.com/@KenzaBorja/Bird-Generation-Calculator" class="card">
+                    <h3>Birds Generation Calculator</h3>
+                    <p>Small tool built using Java logic for generation tracking</p>
+                </a>
+                <a href="/projects/FinalCopyBus/html/BusIndex.html" class="card">
+                    <h3>Business Calculator</h3>
+                    <p>Simple tool to assist with business pricing and margins</p>
+                </a>
             </div>
         </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>I'd love to hear from you. Feel free to reach out!</p>
+            <a class="btn" href="mailto:kenzaborja@gmail.com">Email Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Email: kenzaborja@gmail.com</p>
+            <a href="https://github.com/b-kenza">GitHub</a> |
+            <a href="https://www.linkedin.com/in/kenzaborja/">LinkedIn</a>
+            <p>© 2025 kenzaborja</p>
+        </div>
     </footer>
-
-
-
 </body>
 
 </html>
+
